@@ -44,7 +44,6 @@
         max-width: 1200px;
         margin: auto;
       }
-
       .profiles {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
@@ -65,7 +64,7 @@
         padding: 0;
       }
 
-      .profile-card--container {
+      .profile-card--profile-card--container {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -88,7 +87,7 @@
         box-shadow: 5px 5px 25px #00000088;
       }
 
-      .profile-card--container::before {
+      .profile-card--profile-card--container::before {
         content: "";
         position: absolute;
         display: block;
@@ -104,15 +103,15 @@
         transition: all 0.4s ease;
       }
 
-      .profile-card--container:hover .circle1 {
+      .profile-card--profile-card--container:hover .circle1 {
         top: -83%;
       }
 
-      .profile-card--container:hover::before {
+      .profile-card--profile-card--container:hover::before {
         left: 150%;
       }
 
-      .profile-card--container .circle1 {
+      .profile-card--profile-card--container .circle1 {
         height: 600px;
         width: 600px;
         background-color: #1d1d1d;
@@ -123,7 +122,7 @@
         transition: all 0.5s ease-in-out;
       }
 
-      .profile-card--container .circle2 {
+      .profile-card--profile-card--container .circle2 {
         height: 600px;
         width: 600px;
         background-color: #1d1d1d;
@@ -131,20 +130,20 @@
         top: 86%;
       }
 
-      .profile-card--container .profile {
+      .profile-card--profile-card--container .profile {
         z-index: 5;
         padding: 36px;
       }
 
-      .profile-card--container .profile .content {
+      .profile-card--profile-card--container .profile .content {
         text-align: center;
       }
 
-      .profile-card--container .profile .content .head {
+      .profile-card--profile-card--container .profile .content .head {
         padding: 24px 0 0;
       }
 
-      .profile-card--container .profile .content .head .user-img {
+      .profile-card--profile-card--container .profile .content .head .user-img {
         margin: auto;
         width: 170px;
         height: 170px;
@@ -158,16 +157,16 @@
         box-shadow: 2px 2px 15px #000;
       }
 
-      .profile-card--container .profile .content .head .user-img:hover {
+      .profile-card--profile-card--container .profile .content .head .user-img:hover {
         border-radius: 45%;
       }
 
-      .profile-card--container .profile .content .head .user-img:hover img {
+      .profile-card--profile-card--container .profile .content .head .user-img:hover img {
         -webkit-transform: scale(1.02);
         transform: scale(1.02);
       }
 
-      .profile-card--container .profile .content .head .user-img img {
+      .profile-card--profile-card--container .profile .content .head .user-img img {
         width: 100%;
         height: 100%;
         -o-object-fit: cover;
@@ -176,20 +175,20 @@
         transition: all 0.2s ease-in-out;
       }
 
-      .profile-card--container .profile .content .head .name {
+      .profile-card--profile-card--container .profile .content .head .name {
         font-size: 28px;
         font-weight: 600;
         text-transform: uppercase;
-        margin: 16px auto 4px;
+        margin: 0 auto;
         color: #fff;
       }
 
-      .profile-card--container .profile .content .head .desc {
+      .profile-card--profile-card--container .profile .content .head .desc {
         color: #ffffffcc;
         font-weight: 500;
       }
 
-      .profile-card--container .profile .content .head::after {
+      .profile-card--profile-card--container .profile .content .head::after {
         content: "";
         display: inline-block;
         text-align: center;
@@ -198,18 +197,21 @@
         background-color: #ffffff25;
       }
 
-      .profile-card--container .profile .content .body {
+      .profile-card--profile-card--container .profile .content .body {
         padding: 16px 6px;
         height: 60px;
       }
 
-      .profile-card--container .profile .content .body .cont {
+      .profile-card--profile-card--container .profile .content .body .cont {
         color: #ffffffaa;
         font-size: 12px;
         line-height: 1.5;
       }
 
-      .profile-card--container .profile .content .social .icons {
+      .profile-card--profile-card--container .profile .content .social {
+        padding-top: 18px;
+      }
+      .profile-card--profile-card--container .profile .content .social .icons {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -217,7 +219,7 @@
         justify-content: space-around;
       }
 
-      .profile-card--container .profile .content .social .icons a {
+      .profile-card--profile-card--container .profile .content .social .icons a {
         padding: 16px;
         padding-bottom: 8px;
         border-radius: 5px;
@@ -225,32 +227,32 @@
         transition: all 0.2s ease;
       }
 
-      .profile-card--container .profile .content .social .icons a:hover {
+      .profile-card--profile-card--container .profile .content .social .icons a:hover {
         background-color: #ffffff22;
       }
 
-      .profile-card--container .profile .content .social .icons a:hover ion-icon {
+      .profile-card--profile-card--container .profile .content .social .icons a:hover ion-icon {
         -webkit-transform: rotate(-15deg) scale(1.1);
         transform: rotate(-15deg) scale(1.1);
       }
 
-      .profile-card--container .profile .content .social .icons a:active {
+      .profile-card--profile-card--container .profile .content .social .icons a:active {
         background-color: #ffffff33;
       }
 
-      .profile-card--container .profile .content .social .icons a:active ion-icon {
+      .profile-card--profile-card--container .profile .content .social .icons a:active ion-icon {
         -webkit-transform: rotate(-15deg) scale(0.9);
         transform: rotate(-15deg) scale(0.9);
       }
 
-      .profile-card--container .profile .content .social .icons a ion-icon {
+      .profile-card--profile-card--container .profile .content .social .icons a ion-icon {
         -webkit-transition: all 0.2s ease;
         transition: all 0.2s ease;
         color: #fff;
         font-size: 25px;
       }
 
-      .profile-card--container .profile .content .social::before {
+      .profile-card--profile-card--container .profile .content .social::before {
         content: "";
         display: inline-block;
         text-align: center;
@@ -281,7 +283,7 @@
     
     <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
 
-      <div class="container">
+      <div class="profile-card--container">
         <div class="row align-items-center">
           
           <div class="col-6 col-xl-2">
@@ -312,7 +314,7 @@
     </header>
 
     <!-- <section class="site-section" id="team-section">
-        <div class="container">
+        <div class="profile-card--container">
 
         <div class="blank"></div>
           
@@ -334,7 +336,7 @@
       </section> -->
     
     <section class="site-section border-bottom" id="team-section">
-      <div class="container">
+      <div class="profile-card--container">
             <h2 class="section-title mb-3" id="team-heading">Meet The Team</h2>
             <!-- <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus minima neque tempora reiciendis.</p> -->
           
@@ -349,7 +351,7 @@
 
     
     <footer class="site-footer">
-        <div class="container">
+        <div class="profile-card--container">
           <div class="row">
             <div class="col-md-4">
                   <h2 class="footer-heading mb-4">Feedback</h2> 
@@ -491,7 +493,7 @@
         /*html*/
         `
         <div class="profile-card" @mouseover='mouseOver(member.id)' @mouseleave='mouseLeave(member.id)' >
-          <div class="profile-card--container" :id='member.id'>
+          <div class="profile-card--profile-card--container" :id='member.id'>
           
               <div class="circle1"></div>
               <div class="circle2"></div>
