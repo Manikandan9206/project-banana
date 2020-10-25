@@ -30,6 +30,235 @@
     <link rel="stylesheet" href="css/aos.css">
 
     <link rel="stylesheet" href="css/style.css">
+
+
+    <!-- VUE STYLES -->
+    <!-- ---------- -->
+
+    <style>
+
+      .container {
+        max-width: 1500px;
+      }
+      #team-wrap {
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      .profiles {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        justify-items: center;
+      }
+      .profile-card {
+        font-family: "Montserrat", sans-serif;
+        -webkit-perspective: 2000px;
+        perspective: 2000px;
+        width: 400px;
+        transform: scale(0.9);
+      }
+      .profile-card * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .profile-card--container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        width: 100%;
+        height: 500px;
+        background-color: #292929;
+        border-radius: 20px;
+        position: relative;
+        overflow: hidden;
+        -webkit-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+        -webkit-box-shadow: 5px 5px 25px #00000088;
+        box-shadow: 5px 5px 25px #00000088;
+      }
+
+      .profile-card--container::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 25%;
+        top: -50%;
+        left: -60%;
+        height: 200%;
+        background-color: #ffffff10;
+        -webkit-transform: rotate(30deg);
+        transform: rotate(30deg);
+        z-index: 20;
+        -webkit-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+      }
+
+      .profile-card--container:hover .circle1 {
+        top: -83%;
+      }
+
+      .profile-card--container:hover::before {
+        left: 150%;
+      }
+
+      .profile-card--container .circle1 {
+        height: 600px;
+        width: 600px;
+        background-color: #1d1d1d;
+        border-radius: 50%;
+        position: absolute;
+        top: -85%;
+        -webkit-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+      }
+
+      .profile-card--container .circle2 {
+        height: 600px;
+        width: 600px;
+        background-color: #1d1d1d;
+        position: absolute;
+        top: 86%;
+      }
+
+      .profile-card--container .profile {
+        z-index: 5;
+        padding: 36px;
+      }
+
+      .profile-card--container .profile .content {
+        text-align: center;
+      }
+
+      .profile-card--container .profile .content .head {
+        padding: 24px 0 0;
+      }
+
+      .profile-card--container .profile .content .head .user-img {
+        margin: auto;
+        width: 170px;
+        height: 170px;
+        border-radius: 50%;
+        overflow: hidden;
+        -webkit-transform: scale(0.95);
+        transform: scale(0.95);
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        -webkit-box-shadow: 2px 2px 15px #000;
+        box-shadow: 2px 2px 15px #000;
+      }
+
+      .profile-card--container .profile .content .head .user-img:hover {
+        border-radius: 45%;
+      }
+
+      .profile-card--container .profile .content .head .user-img:hover img {
+        -webkit-transform: scale(1.02);
+        transform: scale(1.02);
+      }
+
+      .profile-card--container .profile .content .head .user-img img {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+      }
+
+      .profile-card--container .profile .content .head .name {
+        font-size: 28px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 16px auto 4px;
+        color: #fff;
+      }
+
+      .profile-card--container .profile .content .head .desc {
+        color: #ffffffcc;
+        font-weight: 500;
+      }
+
+      .profile-card--container .profile .content .head::after {
+        content: "";
+        display: inline-block;
+        text-align: center;
+        width: 100px;
+        height: 1px;
+        background-color: #ffffff25;
+      }
+
+      .profile-card--container .profile .content .body {
+        padding: 16px 6px;
+        height: 60px;
+      }
+
+      .profile-card--container .profile .content .body .cont {
+        color: #ffffffaa;
+        font-size: 12px;
+        line-height: 1.5;
+      }
+
+      .profile-card--container .profile .content .social .icons {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+      }
+
+      .profile-card--container .profile .content .social .icons a {
+        padding: 16px;
+        padding-bottom: 8px;
+        border-radius: 5px;
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+      }
+
+      .profile-card--container .profile .content .social .icons a:hover {
+        background-color: #ffffff22;
+      }
+
+      .profile-card--container .profile .content .social .icons a:hover ion-icon {
+        -webkit-transform: rotate(-15deg) scale(1.1);
+        transform: rotate(-15deg) scale(1.1);
+      }
+
+      .profile-card--container .profile .content .social .icons a:active {
+        background-color: #ffffff33;
+      }
+
+      .profile-card--container .profile .content .social .icons a:active ion-icon {
+        -webkit-transform: rotate(-15deg) scale(0.9);
+        transform: rotate(-15deg) scale(0.9);
+      }
+
+      .profile-card--container .profile .content .social .icons a ion-icon {
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+        color: #fff;
+        font-size: 25px;
+      }
+
+      .profile-card--container .profile .content .social::before {
+        content: "";
+        display: inline-block;
+        text-align: center;
+        width: 100px;
+        height: 1px;
+        background-color: #ffffff25;
+      }
+    </style>
     
     <!-- Import Vue.js and Ion Icons-->
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
@@ -189,8 +418,147 @@
   <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-analytics.js"></script>
   <!-- End Firebase -->
 
-  
   <script src="js/main.js"></script>
+
+  <!-- VUE SCRIPTS -->
+  <!-- ----------- -->
+
+  <!-- Import App -->
+  <script>
+    const teamApp = Vue.createApp({
+      data() {
+        return {
+          team: [
+            {
+              id: "abel-mathew",
+              name: "Abel MAthew",
+              desc: "Ex-DSC Lead",
+              img:
+                "https://firebasestorage.googleapis.com/v0/b/project-banana-4822.appspot.com/o/images%2FAM.jpg?alt=media",
+              cont:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+              social: {
+                ig: "#",
+                gh: "https://github.com/DesignrKnight",
+                tw: "#",
+                fb: "https://facebook.com/designrknight",
+                in: "https://www.linkedin.com/in/DesignrKnight",
+              },
+            },
+            {
+              id: "harish-teens",
+              name: "Harish Teens",
+              desc: "DSC Lead",
+              img:
+                "https://firebasestorage.googleapis.com/v0/b/project-banana-4822.appspot.com/o/images%2FHarish.jpg?alt=media",
+              cont:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+              social: {
+                ig: "https://www.instagram.com/harish_teens/",
+                gh: "https://github.com/HarishTeens",
+                tw: "#",
+                fb: "https://facebook.com/blazing.teens.376",
+                in: "https://www.linkedin.com/in/harish-r-76272221",
+              },
+            },
+            {
+              id: "ankesh-anku",
+              name: "Ankesh Anku",
+              desc: "App Development",
+              img:
+                "https://firebasestorage.googleapis.com/v0/b/project-banana-4822.appspot.com/o/images%2FAA.jpeg?alt=media",
+              cont:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+              social: {
+                ig: "http://instagram.com/ankeshank",
+                gh: "http://github.com/ankank30",
+                tw: "#",
+                fb: "https://fb.com/ankesh.anku30",
+                in: "http://linkedin.com/in/ankesh-anku",
+              },
+            },
+          ],
+        };
+      },
+    });
+  </script>
+
+  <!-- Import Components -->
+  <script>
+    teamApp.component("profile-card", {
+      props: ["member"],
+      template:
+        /*html*/
+        `
+        <div class="profile-card" @mouseover='mouseOver(member.id)' @mouseleave='mouseLeave(member.id)' >
+          <div class="profile-card--container" :id='member.id'>
+          
+              <div class="circle1"></div>
+              <div class="circle2"></div>
+
+              <div class="profile">
+              <div class="content">
+                  <div class="head">
+                  <div class="user-img">
+                      <img :src="member.img" alt="{{member.name}}" />
+                  </div>
+                  <p class="name">{{member.name}}</p>
+                  <p class="desc">{{member.desc}}</p>
+                  </div>
+                  <div class="body">
+                  <p class="cont">
+                      {{member.cont}}
+                  </p>
+                  </div>
+                  <div class="social">
+                  <div class="icons">
+                      <a :href="member.social.ig"><ion-icon style='pointer-events: none;' name="logo-instagram"></ion-icon></a>
+                      <a :href="member.social.gh"><ion-icon style='pointer-events: none;' name="logo-github"></ion-icon></a>
+                      <a :href="member.social.tw"><ion-icon style='pointer-events: none;' name="logo-twitter"></ion-icon></a>
+                      <a :href="member.social.fb"><ion-icon style='pointer-events: none;' name="logo-facebook"></ion-icon></a>
+                      <a :href="member.social.in"><ion-icon style='pointer-events: none;' name="logo-linkedin"></ion-icon></a>
+                  </div>
+                  </div>
+              </div>
+              </div>
+          </div>
+          </div>
+        `,
+      data() {
+        return {};
+      },
+      computed: {},
+      methods: {
+        mouseOver: (id) => {
+          let mouse = {
+            x: event.layerX - 200,
+            y: event.layerY - 250,
+          };
+          //   console.log('Mouseover | Profile Card', id, event, mouse)
+          var style =
+            "rotateX(" +
+            mouse.y / 25 +
+            "deg) rotateY(" +
+            mouse.x / 25 +
+            "deg)";
+          let doc = document.getElementById(id);
+          doc.style.transform = style;
+          // console.log(style)
+        },
+        mouseLeave: (id) => {
+          let doc = document.getElementById(id);
+          doc.style = "";
+          //   console.log('MOUSE LEAVE')
+        },
+      },
+    });
+  </script>
+
+  <!-- Mount App and SCRIPTS -->
+  <script>
+    const mountedApp = teamApp.mount("#team-wrap");
+  </script>
+  
     
   </body>
 </html>
