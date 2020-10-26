@@ -436,9 +436,9 @@
               cont:
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
               social: {
-                ig: "#",
+                ig: "",
                 gh: "https://github.com/DesignrKnight",
-                tw: "#",
+                tw: "",
                 fb: "https://facebook.com/designrknight",
                 in: "https://www.linkedin.com/in/DesignrKnight",
               },
@@ -454,7 +454,7 @@
               social: {
                 ig: "https://www.instagram.com/harish_teens/",
                 gh: "https://github.com/HarishTeens",
-                tw: "#",
+                tw: "",
                 fb: "https://facebook.com/blazing.teens.376",
                 in: "https://www.linkedin.com/in/harish-r-76272221",
               },
@@ -470,9 +470,57 @@
               social: {
                 ig: "http://instagram.com/ankeshank",
                 gh: "http://github.com/ankank30",
-                tw: "#",
+                tw: "",
                 fb: "https://fb.com/ankesh.anku30",
                 in: "http://linkedin.com/in/ankesh-anku",
+              },
+            },
+            {
+              id: "ashwin-sekari",
+              name: "Ashwin Sekhari",
+              desc: "Blockchain",
+              img:
+                "https://firebasestorage.googleapis.com/v0/b/project-banana-4822.appspot.com/o/images%2FAS.jpeg?alt=media",
+              cont:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+              social: {
+                ig: "http://instagram.com/ashsek2",
+                gh: "http://github.com/ashsek",
+                tw: "",
+                fb: "http://fb.com/ashsek10",
+                in: "https://www.linkedin.com/in/ashwin-sekhari-898bba152",
+              },
+            },
+            {
+              id: "chinmay-kabi",
+              name: "Chinmay Kabi",
+              desc: "App Development",
+              img:
+                "https://firebasestorage.googleapis.com/v0/b/project-banana-4822.appspot.com/o/images%2FChinmayKabi.jpeg?alt=media",
+              cont:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+              social: {
+                ig: "http://instagram.com/chinu.kb",
+                gh: "http://github.com/Chinmay-KB",
+                tw: "http://twitter.com/ChinuKabi",
+                fb: "http://fb.com/kablitzkreig",
+                in: "http://linkedin.com/in/chinmaykabi",
+              },
+            },
+            {
+              id: "ritom-sonowal",
+              name: "Ritom Sonowal",
+              desc: "Web Development",
+              img:
+                "https://firebasestorage.googleapis.com/v0/b/project-banana-4822.appspot.com/o/images%2FRitom Sonowal.jpeg?alt=media",
+              cont:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+              social: {
+                ig: "http://instagram.com/ritom__",
+                gh: "http://github.com/ritomsonowal",
+                tw: "",
+                fb: "http://fb.com/ritom.sonowal.7",
+                in: "http://in.linkedin.com/in/ritom-sonowal-008250176",
               },
             },
           ],
@@ -510,11 +558,14 @@
                   </div>
                   <div class="social">
                   <div class="icons">
-                      <a :href="member.social.ig"><ion-icon style='pointer-events: none;' name="logo-instagram"></ion-icon></a>
-                      <a :href="member.social.gh"><ion-icon style='pointer-events: none;' name="logo-github"></ion-icon></a>
-                      <a :href="member.social.tw"><ion-icon style='pointer-events: none;' name="logo-twitter"></ion-icon></a>
-                      <a :href="member.social.fb"><ion-icon style='pointer-events: none;' name="logo-facebook"></ion-icon></a>
-                      <a :href="member.social.in"><ion-icon style='pointer-events: none;' name="logo-linkedin"></ion-icon></a>
+
+                      
+                      
+                      <a v-show='member.social.ig' :href="member.social.ig" target='_blank'><ion-icon style='pointer-events: none;' name="logo-instagram"></ion-icon></a>
+                      <a v-show='member.social.gh' :href="member.social.gh" target='_blank'><ion-icon style='pointer-events: none;'    name="logo-github"></ion-icon></a>
+                      <a v-show='member.social.tw' :href="member.social.tw" target='_blank'><ion-icon style='pointer-events: none;'   name="logo-twitter"></ion-icon></a>
+                      <a v-show='member.social.fb' :href="member.social.fb" target='_blank'><ion-icon style='pointer-events: none;'  name="logo-facebook"></ion-icon></a>
+                      <a v-show='member.social.in' :href="member.social.in" target='_blank'><ion-icon style='pointer-events: none;'  name="logo-linkedin"></ion-icon></a>
                   </div>
                   </div>
               </div>
@@ -535,7 +586,7 @@
           //   console.log('Mouseover | Profile Card', id, event, mouse)
           var style =
             "rotateX(" +
-            mouse.y / 25 +
+            mouse.y / -25 +
             "deg) rotateY(" +
             mouse.x / 25 +
             "deg)";
